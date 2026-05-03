@@ -13,8 +13,8 @@ public class Address {
         this.zip = zip;
     }
 
-    public void showAddress() {
-        System.out.printf("%d %s %s %s %d", number, street, city, state, zip);
-
+    @Override
+    public String toString() {
+        return number + " " + street + ", " + city + " " + state + " " + zip;
     }
 }

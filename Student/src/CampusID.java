@@ -48,6 +48,7 @@ public class CampusID {
         System.out.printf("" +
                 "Name: %s\n" +
                 "School ID: %d\n" +
-                "Department %s", idName, schoolID, department);
+                "Department: %s\n" +
+                "Address: %s", idName, schoolID, department, getStudentAddress().toString());
     }
 }

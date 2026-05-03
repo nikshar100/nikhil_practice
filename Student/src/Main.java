@@ -8,6 +8,6 @@ public class Main {
                 );
         Nik.showID();
 
-
+        System.out.println();
     }
 }

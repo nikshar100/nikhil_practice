@@ -4,8 +4,8 @@ public class Person {
     private int age;
     private String phoneNo;
 
-    public Person(String name, Address address, int age, long phoneNo) {
-        this.name = "";
+    public Person(String name, Address address, int age, String phoneNo) {
+        this.name = name;
         this.address = null;
         this.age = 0;
         this.phoneNo = "";
@@ -51,4 +51,5 @@ public class Person {
                         "\nPhone number: " + getPhoneNo()
                          );
     }
+
 }

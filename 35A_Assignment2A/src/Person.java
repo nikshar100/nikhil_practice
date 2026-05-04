@@ -6,9 +6,9 @@ public class Person {
 
     public Person(String name, Address address, int age, String phoneNo) {
         this.name = name;
-        this.address = null;
-        this.age = 0;
-        this.phoneNo = "";
+        this.address = address;
+        this.age = age;
+        this.phoneNo = phoneNo;
     }
 
     public String getName() {

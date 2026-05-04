@@ -1,10 +1,10 @@
 import java.util.*;
 public class Driver {
+    Scanner in = new Scanner(System.in);
 
     public Person createPerson() {
-        Scanner in = new Scanner(System.in);
 
-        System.out.print("Enter the name: ");
+        System.out.printf("\nEnter the name: ");
         String name = in.nextLine();
 
         System.out.print("\nEnter the address: ");
@@ -21,8 +21,6 @@ public class Driver {
     }
 
     public Address createAddress() {
-
-        Scanner in = new Scanner(System.in);
 
         System.out.printf("\nEnter the house number: ");
         String houseNum = in.nextLine();

@@ -6,11 +6,11 @@ public class Address {
     private String zipCode;
 
     public Address(String houseNum, String street, String city, String state, String zipCode) {
-        this.houseNum = "";
-        this.street = "";
-        this.city = "";
-        this.state = "";
-        this.zipCode = "";
+        this.houseNum = houseNum;
+        this.street = street;
+        this.city = city;
+        this.state = state;
+        this.zipCode = zipCode  ;
     }
 
     @Override

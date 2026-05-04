@@ -117,3 +117,13 @@ Address: 5353 Almaden Expwy., San Jose California, 95118
 Age: 44
 Phone number: (408) 448-1175
 Process finished with exit code 0
+
+
+
+To run the code:
+
+unzip 35A_Assignment2A
+
+javac Driver.java
+java Driver
+

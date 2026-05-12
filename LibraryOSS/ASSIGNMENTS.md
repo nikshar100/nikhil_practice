@@ -15,7 +15,7 @@ Create `BookType`, `BookStatus`, and `PatronTier` enums in the `model` package. 
 ---
 
 ## Assignment 2: Book
-Create the `Book` class. Validate ISBN in the constructor — must not be null, must contain exactly 4 dashes. Title and author must not be null/empty. ISBN has no setter (immutable). Status defaults to `AVAILABLE`. Override `toString()`.
+Create `Book` in `model/`. Validate ISBN in the constructor — must not be null, must contain exactly 4 dashes. Title and author must not be null/empty. ISBN has no setter (immutable). Status defaults to `AVAILABLE`. Override `toString()`.
 
 **Deliverable:** Write a `main()` that creates 3 books and demonstrates that invalid ISBNs throw exceptions.
 

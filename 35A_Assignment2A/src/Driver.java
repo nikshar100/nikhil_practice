@@ -50,6 +50,18 @@ public class Driver {
         Person Mia = driver.createPerson();
         Mia.print();
 
+         Person[] drivers = new Person[3];
+
+         drivers[0] = Mia;
+         drivers[1] = Stacey;
+         drivers[2] = Ross;
+
+        for (Person p : drivers ) {
+            if (p != null) {
+                p.print();
+            }
+        }
+
     }
 
 }

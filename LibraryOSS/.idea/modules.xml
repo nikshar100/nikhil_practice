@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/LibOSS.iml" filepath="$PROJECT_DIR$/LibOSS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/LibOSS.main.iml" filepath="$PROJECT_DIR$/.idea/modules/LibOSS.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/LibOSS.test.iml" filepath="$PROJECT_DIR$/.idea/modules/LibOSS.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/LibraryOSS.iml" filepath="$PROJECT_DIR$/.idea/LibraryOSS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/src.main.iml" filepath="$PROJECT_DIR$/.idea/modules/src.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/src.test.iml" filepath="$PROJECT_DIR$/.idea/modules/src.test.iml" />
+    </modules>
+  </component>
+</project>

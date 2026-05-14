@@ -8,8 +8,9 @@ Set up a new Gradle project in IntelliJ with the Java plugin. Create the package
 ---
 
 ## Assignment 1: Enums and Address
-Create `BookType`, `BookStatus`, and `PatronTier` enums in the `model` package. `PatronTier` should have fields (`maxCheckouts`, `finePerDay`, `loanDays`) with a constructor and getters. Create the `Address` class with validation (no null fields, zip as String). Override `toString()`.
+Create `BookType`, `BookStatus`, and `PatronTier` enums in `model/`. `PatronTier` should have fields (`maxCheckouts`, `finePerDay`, `loanDays`) with a constructor and getters. Create `Address` in `model/` with validation (no null fields, zip as String). Override `toString()`.
 
+**Package:** `model`
 **Deliverable:** 4 files. Write a `main()` that prints each PatronTier's limits and creates/prints an Address.
 
 ---
@@ -17,50 +18,57 @@ Create `BookType`, `BookStatus`, and `PatronTier` enums in the `model` package. 
 ## Assignment 2: Book
 Create `Book` in `model/`. Validate ISBN in the constructor — must not be null, must contain exactly 4 dashes. Title and author must not be null/empty. ISBN has no setter (immutable). Status defaults to `AVAILABLE`. Override `toString()`.
 
+**Package:** `model`
 **Deliverable:** Write a `main()` that creates 3 books and demonstrates that invalid ISBNs throw exceptions.
 
 ---
 
 ## Assignment 3: Branch (Arrays of Objects)
-Create the `Branch` class with a fixed-size `Book[]` array (capacity 500). Implement `addBook()`, `removeBook()`, `findBookByIsbn()`. Track `bookCount` separately from array length. Handle the case where the catalog is full.
+Create `Branch` in `model/` with a fixed-size `Book[]` array (capacity 500). Implement `addBook()`, `removeBook()`, `findBookByIsbn()`. Track `bookCount` separately from array length. Handle the case where the catalog is full.
 
+**Package:** `model`
 **Deliverable:** Write a `main()` that creates a branch, adds 5 books, removes one, and finds one by ISBN. Print the book count before and after removal.
 
 ---
 
 ## Assignment 4: Patron
-Create the `Patron` class. Validate email (must contain "@") and phone (must be exactly 10 digits — use a loop to check each char). Use a `static int nextId` to auto-generate patron IDs. The `checkouts` array size should equal `tier.getMaxCheckouts()`. Implement `canCheckout()` which checks if `checkoutCount < tier.getMaxCheckouts()`.
+Create `Patron` in `model/`. Validate email (must contain "@") and phone (must be exactly 10 digits — use a loop to check each char). Use a `static int nextId` to auto-generate patron IDs. The `checkouts` array size should equal `tier.getMaxCheckouts()`. Implement `canCheckout()` which checks if `checkoutCount < tier.getMaxCheckouts()`.
 
+**Package:** `model`
 **Deliverable:** Write a `main()` that creates 3 patrons of different tiers and prints their IDs and max checkout limits. Demonstrate that invalid email/phone throws exceptions.
 
 ---
 
 ## Assignment 5: Checkout and Fine (Association)
-Create `Checkout`. It takes a Patron, Book, and checkoutDate (int). It calculates `dueDate = checkoutDate + patron.getTier().getLoanDays()`. On creation, set the book's status to `CHECKED_OUT`. Implement `returnBook(returnDate)` which sets status back to `AVAILABLE`. Implement `getDaysOverdue(currentDate)` and `calculateFine(currentDate)`.
+Create `Checkout` in `model/`. It takes a Patron, Book, and checkoutDate (int). It calculates `dueDate = checkoutDate + patron.getTier().getLoanDays()`. On creation, set the book's status to `CHECKED_OUT`. Implement `returnBook(returnDate)` which sets status back to `AVAILABLE`. Implement `getDaysOverdue(currentDate)` and `calculateFine(currentDate)`.
 
-Create `Fine` which stores the calculated fine amount for a specific checkout.
+Create `Fine` in `model/` which stores the calculated fine amount for a specific checkout.
 
+**Package:** `model`
 **Deliverable:** Write a `main()` that checks out a book on day 1, returns it on day 20, and prints whether it was overdue and the fine amount.
 
 ---
 
 ## Assignment 6: CheckoutService (Wiring It Together)
-Create `CheckoutService`. It maintains a `Checkout[]` array. The `checkout()` method must validate: patron can check out (not at max), book is available. The `returnBook()` method creates a Fine if overdue. Implement `getOverdueCheckouts(currentDate)` which loops through all checkouts and returns those past due.
+Create `CheckoutService` in `service/`. It maintains a `Checkout[]` array. The `checkout()` method must validate: patron can check out (not at max), book is available. The `returnBook()` method creates a Fine if overdue. Implement `getOverdueCheckouts(currentDate)` which loops through all checkouts and returns those past due.
 
+**Package:** `service`
 **Deliverable:** Write a `main()` that simulates: create a branch with 5 books, create 2 patrons, check out books, return some late, print overdue list and fines.
 
 ---
 
 ## Assignment 7: SearchService (String Methods)
-Create `SearchService`. Implement `searchByTitle()` using `String.contains()` with `toLowerCase()` for case-insensitive matching. Implement `searchByAuthor()` the same way. `findPatronByName()` should use `equalsIgnoreCase()`. Search across all branches.
+Create `SearchService` in `service/`. Implement `searchByTitle()` using `String.contains()` with `toLowerCase()` for case-insensitive matching. Implement `searchByAuthor()` the same way. `findPatronByName()` should use `equalsIgnoreCase()`. Search across all branches.
 
+**Package:** `service`
 **Deliverable:** Write a `main()` that adds 10 books across 2 branches, then searches by partial title and by author. Print results.
 
 ---
 
 ## Assignment 8: ReportBuilder (StringBuffer and 2D Arrays)
-Create `ReportBuilder` in the `util` package. Use `StringBuffer` (not `+` concatenation) to build formatted reports. Implement `buildBranchReport()` that lists all books in a branch with their status. Implement `buildCheckoutStats()` that takes a `int[][]` (branches × days of week) and formats it as a table.
+Create `ReportBuilder` in `util/`. Use `StringBuffer` (not `+` concatenation) to build formatted reports. Implement `buildBranchReport()` that lists all books in a branch with their status. Implement `buildCheckoutStats()` that takes a `int[][]` (branches × days of week) and formats it as a table.
 
+**Package:** `util`
 **Deliverable:** Write a `main()` that populates a 2D stats array with sample data, builds and prints a branch report and a stats table.
 
 ---

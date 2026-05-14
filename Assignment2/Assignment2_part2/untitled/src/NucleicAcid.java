@@ -1,8 +1,8 @@
 public class NucleicAcid {
-    String name;
-    String chemicalFormula;
-    float molarMass;
-    float density;
+    private String name;
+    private String chemicalFormula;
+    private float molarMass;
+    private float density;
 
     public NucleicAcid(String name, String chemicalFormula, float molarMass, float density) {
         this.name = name;
@@ -45,9 +45,10 @@ public class NucleicAcid {
 
     public void print() {
         System.out.printf(
-                "Nucleic Acid Name: " + name +
+                "\n\nNucleic Acid Name: " + name +
                 "\nNucleic Acid Chemical Formula: " + chemicalFormula +
                 "\nNucleic Acid Molar Mass: " + molarMass +
                 "\nNucleic Acid Density: " + density);
     }
+
 }

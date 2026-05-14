@@ -45,7 +45,7 @@ public class HumanGenome {
 
     public void print() {
         System.out.printf("" +
-                "Genome Name: " + genomeName +
+                "\n\nGenome Name: " + genomeName +
                 "\nNumber of genes: " + numGenes +
                 "\nNumber of chromosomes: " + numChromosomes +
                 "\nNumber of cells: " + numCells);
